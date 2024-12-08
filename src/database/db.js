@@ -8,7 +8,13 @@ db.prepare(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE,
     email TEXT UNIQUE,
-    password TEXT
+    password TEXT,
+    planType TEXT,
+    cardHolderName TEXT,
+    cardNumber TEXT,
+    expiryDate TEXT,
+    cvv TEXT,
+    admin BOOLEAN DEFAULT false
   )
 `).run();
 
